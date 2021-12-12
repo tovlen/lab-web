@@ -28,7 +28,7 @@ RSpec.describe "Foobar" do
     
     it 'If one of the numbers is not equal to twenty' do
        
-        expect(Foobar.foobar(15, 19)).to eq 29
+        expect(Foobar.foobar(15, 19)).to eq 34
     
     end
 
