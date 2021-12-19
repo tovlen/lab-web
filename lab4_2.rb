@@ -1,4 +1,4 @@
-class ATM
+class CashMachine
     
     def self.initial 
         
@@ -71,8 +71,8 @@ class ATM
 
     def self.main
         
-        #ATM.initial
-        atm = ATM.new
+        #CashMachine.initial
+        atm = CashMachine.new
         loop do
 
             puts "
@@ -113,7 +113,7 @@ class ATM
 end
 
 def init
-    puts ATM.main()
+    puts CashMachine.main()
 end
 
 init

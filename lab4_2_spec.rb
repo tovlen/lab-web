@@ -6,7 +6,7 @@ describe 'ATM' do
     it 'Show your balance: ' do
 
         allow_any_instance_of(Kernel).to receive(:gets).and_return("B", "Q")
-        expect(ATM.main)
+        expect(CashMachine.main)
         expect(File.read("balance.txt")).to eql("100.0")
 
     end
@@ -14,7 +14,7 @@ describe 'ATM' do
     it 'Deposit cash: ' do
         
         allow_any_instance_of(Kernel).to receive(:gets).and_return("D", "400", "Q")
-        expect(ATM.main)
+        expect(CashMachine.main)
         expect(File.read("balance.txt")).to eql("500.0")
 
     end
@@ -22,7 +22,7 @@ describe 'ATM' do
     it 'Withdraw cash: ' do
         
         allow_any_instance_of(Kernel).to receive(:gets).and_return("W", "200", "Q")
-        expect(ATM.main)
+        expect(CashMachine.main)
         expect(File.read("balance.txt")).to eql("300.0")
 
     end
