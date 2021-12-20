@@ -2,15 +2,22 @@ class CashMachine
     
     def self.initial 
         
-        defaulte_balance = 100.0
-        if File.exists?("balance.txt")
-            file = File.open("balance.txt")
-            @balance = Float(File.read("balance.txt")) 
+        def initialize
+            
+        if File.exist?(PATH_BALANCE)
+            
+            @balance = File.read(PATH_BALANCE).to_i
+            raise TypeError, 'Balance is incorrect!' unless (@balance.kind_of?(Integer))
+            
         else
-            @balance = defaulte_balance
+            
+            @balance = DEFAULT_BALANCE
+            
         end
-    
-        @balance = Float(File.read("balance.txt")) || defaulte_balance    
+            
+    init
+            
+    end  
             
     end
 
@@ -69,7 +76,7 @@ class CashMachine
     end
 
 
-    def self.main
+    def init
         
         #CashMachine.initial
         atm = CashMachine.new
@@ -111,10 +118,3 @@ class CashMachine
     end
     
 end
-
-def init
-    puts CashMachine.main()
-end
-
-init
-
