@@ -49,7 +49,7 @@ while (connection = server.accept)
     when 'init'
 
         'Oh, hello there, try go by link: <br>
-        <a href="http://localhost:3000/balance">/balance</a><br>
+        <a href="http://localhost:3000/get_balance">/get_balance</a><br>
         <a href="http://localhost:3000/deposit?value=200">/deposit?value=300</a><br>
         <a href="http://localhost:3000/withdraw?value=300">/withdraw?value=300</a><br>'
 
