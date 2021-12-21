@@ -1,0 +1,5 @@
+<h1>Grading labwork</h1>
+<%=form_with url: mark_labwork_path(@labwork) do |f|  %>
+    <%=f.text_field :grade %>
+    <%=f.submit%>
+<%end %>
