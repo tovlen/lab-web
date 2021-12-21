@@ -44,7 +44,7 @@ while (connection = server.accept)
 
     when 'balance'
 
-        cash_machine.balance.to_s
+        cash_machine.get_balance.to_s
 
     when 'init'
 
